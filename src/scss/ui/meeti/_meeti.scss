@@ -1,0 +1,20 @@
+@use 'base/mixins' as m; 
+
+.app {
+    
+    &__name {
+        @include m.heading;
+        margin-bottom: 4rem;
+    }
+
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(3, 2rem)
+        }
+    }
+
+    &__info {
+        grid-column: 1 / 3;
+    }
+
+}
